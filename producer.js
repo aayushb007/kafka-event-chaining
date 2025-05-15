@@ -12,7 +12,7 @@ async function produceMsg(label) {
 
     await producer.send({
       topic,
-      messages: [{ key: null, value: message }],
+      messages: [{  value: message }],
     });
     console.log(`[${label}] Sent: ${message}`);
   }, 3000);
@@ -23,3 +23,4 @@ async function produceMsg(label) {
 
 produceMsg('Cluster-A');
 produceMsg('Cluster-B');
+// produceMsg('Cluster-c');

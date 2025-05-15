@@ -2,7 +2,7 @@ import {kafka} from './config.js';
 async function init() { 
   const admin = kafka.admin();
   console.log("Admin connecting...");
-  admin.connect();
+  await admin.connect();
   console.log("Adming Connection Success...");
 
   console.log("Creating Topic [test-topic]");
@@ -11,10 +11,12 @@ async function init() {
       {
         topic: "test-topic",
         numPartitions: 2,
+        replicationFactor: 1
       },
       {
         topic: "test-topic-b",
         numPartitions: 2,
+        replicationFactor: 1
       },
     ],
   });
