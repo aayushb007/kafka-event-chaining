@@ -16,7 +16,12 @@ The application consists of four main components:
 ---
 
 ## Architecture
-
+┌───────────┐
+                   │           │
+┌─────────┐        │ test-topic│        ┌────────┐         ┌─────────────┐
+│ Producer│───────▶│           │───────▶│Consumer│────────▶│ test-topic-b│───────▶┌──────────┐
+└─────────┘        │           │        └────────┘         └─────────────┘        │ConsumerB │
+                   └───────────┘                                                  └──────────┘
 
 ---
 
