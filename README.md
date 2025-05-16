@@ -26,15 +26,6 @@ The application consists of four main components:
 
 ---
 
-## Installation
-
-1. **Clone the repository**
-
-
-
-The producer will send messages from two clusters (`Cluster-A` and `Cluster-B`) every 3 seconds.
-
----
 
 ## Code Explanation
 
